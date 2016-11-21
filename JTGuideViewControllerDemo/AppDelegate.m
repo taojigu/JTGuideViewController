@@ -18,6 +18,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    if (![JTGuideViewController shouldPresented])
+    {
+        return YES;
+    }
+    
     // Override point for customization after application launch.
     UIImage* image1 = [UIImage imageNamed:@"1.png"];
     UIImage* image2 = [UIImage imageNamed:@"2.png"];

@@ -18,4 +18,7 @@ typedef void(^NextButtonAppearanceBlock)(UIButton* _Nonnull  button);
 
 -(_Nonnull instancetype)initWithImageArray:(NSArray* _Nonnull )imageArray;
 
+
++(BOOL)shouldPresented;
+
 @end

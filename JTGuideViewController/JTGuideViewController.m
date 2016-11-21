@@ -44,6 +44,10 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [self notifyThisVersionShown];
+    
+    
     [self layoutCustomViews];
     
     // Uncomment the following line to preserve selection between presentations
@@ -60,6 +64,23 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
++(BOOL)shouldPresented
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+
+    BOOL shown = [userDefaults boolForKey:[NSString stringWithFormat:@"version_%@", version]];
+    return !shown;
+}
+-(void)notifyThisVersionShown
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+
+    [userDefaults setBool:YES forKey:[NSString stringWithFormat:@"version_%@", version]];
+    [userDefaults synchronize];
+    
+}
 /*
 #pragma mark - Navigation
 
