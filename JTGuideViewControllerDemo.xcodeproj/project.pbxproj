@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8403FD6F1DE2CBAA0017BC4C /* JTGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403FD6E1DE2CBAA0017BC4C /* JTGuideViewController.m */; };
+		8403FD741DE2D10C0017BC4C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8403FD711DE2D10C0017BC4C /* 1.png */; };
+		8403FD751DE2D10C0017BC4C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8403FD721DE2D10C0017BC4C /* 2.png */; };
+		8403FD761DE2D10C0017BC4C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8403FD731DE2D10C0017BC4C /* 3.png */; };
+		8403FD791DE2DAD40017BC4C /* JTGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403FD781DE2DAD40017BC4C /* JTGuideViewCell.m */; };
 		8405D4DD1DDB007C0032D2BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D4DC1DDB007C0032D2BF /* main.m */; };
 		8405D4E01DDB007C0032D2BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D4DF1DDB007C0032D2BF /* AppDelegate.m */; };
 		8405D4E31DDB007C0032D2BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D4E21DDB007C0032D2BF /* ViewController.m */; };
@@ -15,7 +20,6 @@
 		8405D4EB1DDB007C0032D2BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405D4E91DDB007C0032D2BF /* LaunchScreen.storyboard */; };
 		8405D4F61DDB007C0032D2BF /* JTGuideViewControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D4F51DDB007C0032D2BF /* JTGuideViewControllerDemoTests.m */; };
 		8405D5011DDB007C0032D2BF /* JTGuideViewControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D5001DDB007C0032D2BF /* JTGuideViewControllerDemoUITests.m */; };
-		8405D5111DDB02660032D2BF /* JTGuideCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405D5101DDB02660032D2BF /* JTGuideCollectionViewController.m */; };
 		8405D5131DDB02E70032D2BF /* JTGuideViewController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8405D5121DDB02E70032D2BF /* JTGuideViewController.podspec */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8403FD6D1DE2CBAA0017BC4C /* JTGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTGuideViewController.h; path = JTGuideViewController/JTGuideViewController.h; sourceTree = "<group>"; };
+		8403FD6E1DE2CBAA0017BC4C /* JTGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTGuideViewController.m; path = JTGuideViewController/JTGuideViewController.m; sourceTree = "<group>"; };
+		8403FD711DE2D10C0017BC4C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
+		8403FD721DE2D10C0017BC4C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Images/2.png; sourceTree = "<group>"; };
+		8403FD731DE2D10C0017BC4C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = Images/3.png; sourceTree = "<group>"; };
+		8403FD771DE2DAD40017BC4C /* JTGuideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTGuideViewCell.h; path = JTGuideViewController/JTGuideViewCell.h; sourceTree = "<group>"; };
+		8403FD781DE2DAD40017BC4C /* JTGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTGuideViewCell.m; path = JTGuideViewController/JTGuideViewCell.m; sourceTree = "<group>"; };
 		8405D4D81DDB007C0032D2BF /* JTGuideViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTGuideViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405D4DC1DDB007C0032D2BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8405D4DE1DDB007C0032D2BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +64,6 @@
 		8405D4FC1DDB007C0032D2BF /* JTGuideViewControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTGuideViewControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405D5001DDB007C0032D2BF /* JTGuideViewControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTGuideViewControllerDemoUITests.m; sourceTree = "<group>"; };
 		8405D5021DDB007C0032D2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8405D50F1DDB02660032D2BF /* JTGuideCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTGuideCollectionViewController.h; path = JTGuideViewController/JTGuideCollectionViewController.h; sourceTree = "<group>"; };
-		8405D5101DDB02660032D2BF /* JTGuideCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTGuideCollectionViewController.m; path = JTGuideViewController/JTGuideCollectionViewController.m; sourceTree = "<group>"; };
 		8405D5121DDB02E70032D2BF /* JTGuideViewController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JTGuideViewController.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,9 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8403FD701DE2D1010017BC4C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8403FD711DE2D10C0017BC4C /* 1.png */,
+				8403FD721DE2D10C0017BC4C /* 2.png */,
+				8403FD731DE2D10C0017BC4C /* 3.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8405D4CF1DDB007C0032D2BF = {
 			isa = PBXGroup;
 			children = (
+				8403FD701DE2D1010017BC4C /* Images */,
 				8405D5121DDB02E70032D2BF /* JTGuideViewController.podspec */,
 				8405D50E1DDB02410032D2BF /* JTGuideViewController */,
 				8405D4DA1DDB007C0032D2BF /* JTGuideViewControllerDemo */,
@@ -150,8 +170,10 @@
 		8405D50E1DDB02410032D2BF /* JTGuideViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8405D50F1DDB02660032D2BF /* JTGuideCollectionViewController.h */,
-				8405D5101DDB02660032D2BF /* JTGuideCollectionViewController.m */,
+				8403FD6D1DE2CBAA0017BC4C /* JTGuideViewController.h */,
+				8403FD6E1DE2CBAA0017BC4C /* JTGuideViewController.m */,
+				8403FD771DE2DAD40017BC4C /* JTGuideViewCell.h */,
+				8403FD781DE2DAD40017BC4C /* JTGuideViewCell.m */,
 			);
 			name = JTGuideViewController;
 			sourceTree = "<group>";
@@ -223,7 +245,7 @@
 				TargetAttributes = {
 					8405D4D71DDB007C0032D2BF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = AHF2R5N763;
+						DevelopmentTeam = UMRACKG926;
 						ProvisioningStyle = Automatic;
 					};
 					8405D4F01DDB007C0032D2BF = {
@@ -265,10 +287,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8403FD751DE2D10C0017BC4C /* 2.png in Resources */,
 				8405D5131DDB02E70032D2BF /* JTGuideViewController.podspec in Resources */,
 				8405D4EB1DDB007C0032D2BF /* LaunchScreen.storyboard in Resources */,
 				8405D4E81DDB007C0032D2BF /* Assets.xcassets in Resources */,
 				8405D4E61DDB007C0032D2BF /* Main.storyboard in Resources */,
+				8403FD761DE2D10C0017BC4C /* 3.png in Resources */,
+				8403FD741DE2D10C0017BC4C /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8403FD6F1DE2CBAA0017BC4C /* JTGuideViewController.m in Sources */,
 				8405D4E31DDB007C0032D2BF /* ViewController.m in Sources */,
-				8405D5111DDB02660032D2BF /* JTGuideCollectionViewController.m in Sources */,
+				8403FD791DE2DAD40017BC4C /* JTGuideViewCell.m in Sources */,
 				8405D4E01DDB007C0032D2BF /* AppDelegate.m in Sources */,
 				8405D4DD1DDB007C0032D2BF /* main.m in Sources */,
 			);
@@ -445,8 +471,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AHF2R5N763;
+				DEVELOPMENT_TEAM = UMRACKG926;
 				INFOPLIST_FILE = JTGuideViewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gujitao.JTGuideViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,8 +484,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AHF2R5N763;
+				DEVELOPMENT_TEAM = UMRACKG926;
 				INFOPLIST_FILE = JTGuideViewControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gujitao.JTGuideViewControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

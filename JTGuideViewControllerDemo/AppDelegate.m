@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "JTGuideViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIImage* image1 = [UIImage imageNamed:@"1.png"];
+    UIImage* image2 = [UIImage imageNamed:@"2.png"];
+    UIImage* image3 = [UIImage imageNamed:@"3.png"];
+    NSArray* imageArray = @[image1,image2,image3];
+    
+    JTGuideViewController* jgvc = [[JTGuideViewController alloc]initWithImageArray:imageArray];
+
+    __weak typeof(self)weakSelf = self;
+    jgvc.guideFinishBlock = ^()
+    {
+        ViewController*vc = [[ViewController alloc] init];
+        weakSelf.window.rootViewController = vc;
+    };
+    jgvc.nextButtonAppearanceBlock = ^(UIButton* button)
+    {
+        [button setTitle:@"Finish" forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+        [button setBackgroundColor:[UIColor whiteColor]];
+    };
+    
+    
+    self.window.rootViewController = jgvc;
+
     return YES;
 }
 
