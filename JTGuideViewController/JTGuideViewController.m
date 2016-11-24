@@ -33,8 +33,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self = [super initWithCollectionViewLayout:layout];
     self.imageArray = imageArray;
-    [self.collectionView registerClass:[JTGuideViewCell class] forCellWithReuseIdentifier:kCellIdentifier_JTGuideViewCell];
-    
+
 
     [self initCustomView];
 
@@ -44,6 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
     
     [self notifyThisVersionShown];
     
@@ -66,6 +66,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 +(BOOL)shouldPresented
 {
+    return YES;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
 
@@ -95,19 +96,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)initCustomView
 {
-    self.collectionView.bounces = NO;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.showsVerticalScrollIndicator = NO;
-    self.collectionView.pagingEnabled = YES;
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
-    [self.collectionView registerClass:[JTGuideViewCell class] forCellWithReuseIdentifier:kCellIdentifier_JTGuideViewCell];
-    
+
     self.pageControl = [[UIPageControl alloc] init];
-
-
-    
+    //self.pageControl.backgroundColor = [UIColor whiteColor];
+    self.pageControl.numberOfPages = self.imageArray.count;
 }
 
 -(void)configureCellButton:(UIButton*)button
@@ -129,10 +121,26 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 -(void)layoutCustomViews
 {
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.pagingEnabled = YES;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    [self.collectionView registerClass:[JTGuideViewCell class] forCellWithReuseIdentifier:kCellIdentifier_JTGuideViewCell];
     
     self.pageControl.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44.0f);
     self.pageControl.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height - 60);
+    [self.view addSubview:self.pageControl];
+    [self.view bringSubviewToFront:self.pageControl];
     
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    self.pageControl.currentPage = (scrollView.contentOffset.x / kJTGuideViewBounds.size.width);
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -204,12 +212,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
-#pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-    self.pageControl.currentPage = (scrollView.contentOffset.x / kJTGuideViewBounds.size.width);
-}
 #pragma mark <UICollectionViewDelegate>
 
 /*
