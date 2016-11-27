@@ -66,7 +66,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 +(BOOL)shouldPresented
 {
-    return YES;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
 
@@ -178,10 +177,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     return cell;
-    
-    // Configure the cell
-    
-    return cell;
+
 }
 /**
  *  计算自适应的图片
